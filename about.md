@@ -4,20 +4,21 @@ title: Reflection
 ---
 
 <div class="container mx-auto p-6 max-w-3xl">
-  <h1 class="text-3xl font-bold mb-6">Reflection on Using AI Tools</h1>
+  <h1 class="title">Reflection on AI Tools</h1>
   
   <div class="prose lg:prose-xl">
-    <p>
-      [Your first paragraph about the effectiveness of the AI tools]
-    </p>
-    
-    <p>
-      [Your second paragraph comparing the models]
-    </p>
-    
-    <p>
-      [Your third paragraph with specific examples and prompts]
-    </p>
+  <p class="description">
+  AI tools significantly improved the efficiency of my website project by automating repetitive tasks like generating boilerplate code and debugging common errors. They provided real-time suggestions, reducing development time and improving code quality. With AI assistance, I could focus more on design and functionality rather than syntax and structure.
+  </p>
+
+  <p class="description">
+    I experimented with different AI models, and I noticed variations in their performance. Some models excelled at generating clean, well-structured HTML and CSS, while others were better at optimizing JavaScript logic. The balance between speed, accuracy, and contextual understanding played a key role in choosing the right AI assistant.
+  </p>
+
+  <p class="description">
+    One particularly useful example was using AI to generate responsive navigation bar code with just a simple prompt: "Create a mobile-friendly navbar with dropdown menus." It also helped refine my JavaScript by suggesting an optimized event listener for handling user interactions. These AI-driven enhancements made the development process much smoother.
+  </p>
+
     
     <h2 class="text-2xl font-bold mt-8 mb-4">Example Prompts and Responses</h2>
     
@@ -76,7 +77,5 @@ title: Reflection
       export default Navbar;
       </code></pre></pre>
     </div>
-    
-    <!-- Add more examples as needed -->
   </div>
 </div>
