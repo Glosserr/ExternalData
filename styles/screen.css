@@ -1,16 +1,18 @@
+/* Global Styles */
 body {
     font-family: Helvetica, sans-serif;
     color: #EAE8FF;
-    background: #2D3142;
+    background: #1B2A1F; /* Dark forest green */
     padding: 0 40px;
     text-align: center;
 }
 
+/* Navigation Bar */
 nav {
     margin: 40px auto 0 auto;
     width: 250px;
     border-radius: 50px;
-    background: #212431;
+    background: #2C3A2D;
 }
 
 nav ul {
@@ -33,18 +35,83 @@ nav ul li a {
     font-size: 1.2em;
 }
 
+/* Headings */
 h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
+    font-size: 3em;
+    letter-spacing: -1px;
+    color: #D8D8D8;
 }
 
-h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+h2, h3 {
+    color: #1B2A1F;
 }
 
-img.about {
-    opacity: 0.5;
+/* API Data Sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bg-blue-50 {
+    background: #2A3D2F; /* Darker forest green */
+    color: #1B2A1F;
+}
+
+.bg-green-50 {
+    background: #344E41; /* Muted green */
+    color: #1B2A1F;
+}
+
+.bg-white {
+    background: #D8D8D8;
+    color: #1B2A1F;
+}
+
+.text-gray-600 {
+    color: #556B52;
+}
+
+.bg-gray-100 {
+    background: #3D4F3A;
+    color: #EAE8FF;
+}
+
+.bg-gray-200 {
+    background: #556B52;
+    color: #EAE8FF;
+}
+
+.shadow {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Error Message */
+.bg-red-100 {
+    background: #5B2C2C;
+    color: #FFDADA;
+}
+
+.text-red-700 {
+    color: #FFB3B3;
+}
+
+/* Reflection Page */
+.prose {
+    color: #EAE8FF;
+}
+
+.lg\:prose-xl {
+    font-size: 1.1em;
+}
+
+.max-w-3xl {
+    max-width: 800px;
+}
+
+pre {
+    background: #556B52;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
 }
