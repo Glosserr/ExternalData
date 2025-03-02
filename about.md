@@ -27,55 +27,135 @@ title: Reflection
       <pre class="bg-gray-200 p-2 rounded">"Generate a responsive navigation bar using React and Tailwind CSS."</pre>
       
       <h3 class="font-bold mt-4">Response from GPT-4o:</h3>
-      <pre class="bg-gray-200 p-2 rounded"><pre><code>
-      &lt;!-- GPT-4o Response --&gt;
-      import { useState } from "react";
+      <div class="bg-gray-100 p-4 rounded-md">
+  <pre class="text-sm text-gray-800"><code>
+import { useState } from 'react';
 
-      export default function Navbar() {
-        const [open, setOpen] = useState(false);
+function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
 
-        return (
-          &lt;nav class=&quot;bg-blue-600 p-4&quot;&gt;
-            &lt;div class=&quot;flex justify-between items-center&quot;&gt;
-              &lt;h1 class=&quot;text-white text-xl font-bold&quot;&gt;MyWebsite&lt;/h1&gt;
-              &lt;button onClick={() =&gt; setOpen(!open)} class=&quot;text-white md:hidden&quot;&gt;☰&lt;/button&gt;
-            &lt;/div&gt;
-            &lt;ul class={`md:flex md:space-x-4 ${open ? &quot;block&quot; : &quot;hidden&quot;}`}&gt;
-              &lt;li class=&quot;text-white hover:underline&quot;&gt;Home&lt;/li&gt;
-              &lt;li class=&quot;text-white hover:underline&quot;&gt;About&lt;/li&gt;
-              &lt;li class=&quot;text-white hover:underline&quot;&gt;Contact&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/nav&gt;
-        );
-      }</pre>
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  return (
+    &lt;nav className="bg-blue-500 p-4"&gt;
+      &lt;div className="max-w-7xl mx-auto flex items-center justify-between"&gt;
+        {/* Logo */}
+        &lt;div className="text-white font-bold text-xl"&gt;
+          &lt;a href="#"&gt;MyWebsite&lt;/a&gt;
+        &lt;/div&gt;
+
+        {/* Menu Icon (Hamburger) */}
+        &lt;button
+          className="text-white md:hidden"
+          onClick={toggleMenu}
+        &gt;
+          &lt;svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            strokeWidth="2"
+          &gt;
+            &lt;path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            /&gt;
+          &lt;/svg&gt;
+        &lt;/button&gt;
+
+        {/* Menu Items */}
+        &lt;div
+          className={`md:flex ${isOpen ? 'block' : 'hidden'} flex-col md:flex-row md:space-x-4`}
+        &gt;
+          &lt;a href="#" className="text-white py-2 px-4 hover:bg-blue-700 rounded"&gt;
+            Home
+          &lt;/a&gt;
+          &lt;a href="#about" className="text-white py-2 px-4 hover:bg-blue-700 rounded"&gt;
+            About
+          &lt;/a&gt;
+          &lt;a href="#services" className="text-white py-2 px-4 hover:bg-blue-700 rounded"&gt;
+            Services
+          &lt;/a&gt;
+          &lt;a href="#contact" className="text-white py-2 px-4 hover:bg-blue-700 rounded"&gt;
+            Contact
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  );
+}
+
+export default Navbar;
+  </code></pre>
+</div>
+
       
       <h3 class="font-bold mt-4">Response from Claude 3.7 Sonnet:</h3>
-      <pre class="bg-gray-200 p-2 rounded"><pre><code>
-      &lt;!-- Claude 3.7 Sonnet --&gt;
-      import React, { useState } from "react";
+      <div class="bg-gray-100 p-4 rounded-md">
+  <pre class="text-sm text-gray-800"><code>
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
-      function Navbar() {
-        const [menuOpen, setMenuOpen] = useState(false);
+const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-        return (
-          &lt;nav style=&quot;background-color: #1E40AF; padding: 1rem;&quot;&gt;
-            &lt;div style=&quot;display: flex; justify-content: space-between;&quot;&gt;
-              &lt;h1 style=&quot;color: white; font-size: 1.25rem; font-weight: bold;&quot;&gt;MyWebsite&lt;/h1&gt;
-              &lt;button onClick={() =&gt; setMenuOpen(!menuOpen)} style=&quot;color: white; display: none;&quot;&gt;
-                Menu
-              &lt;/button&gt;
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    &lt;nav className="bg-gray-800 text-white"&gt;
+      &lt;div className="max-w-6xl mx-auto px-4"&gt;
+        &lt;div className="flex justify-between items-center h-16"&gt;
+          {/* Logo */}
+          &lt;div className="flex-shrink-0 font-bold text-xl"&gt;
+            Brand Logo
+          &lt;/div&gt;
+
+          {/* Desktop Navigation */}
+          &lt;div className="hidden md:block"&gt;
+            &lt;div className="ml-10 flex items-center space-x-4"&gt;
+              &lt;a href="#" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"&gt;Home&lt;/a&gt;
+              &lt;a href="#" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"&gt;About&lt;/a&gt;
+              &lt;a href="#" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"&gt;Services&lt;/a&gt;
+              &lt;a href="#" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"&gt;Blog&lt;/a&gt;
+              &lt;a href="#" className="px-3 py-2 rounded-md text-sm font-medium bg-gray-900 hover:bg-gray-700"&gt;Contact&lt;/a&gt;
             &lt;/div&gt;
-            &lt;ul style=&quot;display: ${menuOpen ? &quot;block&quot; : &quot;none&quot;}&quot;&gt;
-              &lt;li style=&quot;color: white;&quot;&gt;Home&lt;/li&gt;
-              &lt;li style=&quot;color: white;&quot;&gt;About&lt;/li&gt;
-              &lt;li style=&quot;color: white;&quot;&gt;Contact&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/nav&gt;
-        );
-      }
+          &lt;/div&gt;
 
-      export default Navbar;
-      </code></pre></pre>
+          {/* Mobile menu button */}
+          &lt;div className="md:hidden flex items-center"&gt;
+            &lt;button 
+              onClick={toggleMenu}
+              className="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-700 focus:outline-none"
+            &gt;
+              {isOpen ? &lt;X size={24} /&gt; : &lt;Menu size={24} /&gt;}
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      {/* Mobile Navigation */}
+      {isOpen &amp;&amp; (
+        &lt;div className="md:hidden"&gt;
+          &lt;div className="px-2 pt-2 pb-3 space-y-1 sm:px-3"&gt;
+            &lt;a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700"&gt;Home&lt;/a&gt;
+            &lt;a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700"&gt;About&lt;/a&gt;
+            &lt;a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700"&gt;Services&lt;/a&gt;
+            &lt;a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700"&gt;Blog&lt;/a&gt;
+            &lt;a href="#" className="block px-3 py-2 rounded-md text-base font-medium bg-gray-900 hover:bg-gray-700"&gt;Contact&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      )}
+    &lt;/nav&gt;
+  );
+};
+
+export default NavBar;
+  </code></pre>
+</div>
     </div>
   </div>
 </div>
