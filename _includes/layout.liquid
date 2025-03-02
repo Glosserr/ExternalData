@@ -20,6 +20,31 @@ title: 11ty Boilerplate
   
   <!-- Your custom JS -->
   <script src="/js/app.js"></script>
+   <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#1B2A1F',
+              dark: '#2A3D2F',
+              medium: '#344E41',
+              light: '#556B52'
+            },
+            cream: '#EAE8FF',
+            lightgray: '#D8D8D8'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .title-gradient {
+      background: linear-gradient(to right, white, #90ee90);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
 <body>
   <nav>
