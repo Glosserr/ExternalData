@@ -8,15 +8,15 @@ title: Reflection
   
   <div class="prose lg:prose-xl">
   <p class="description">
-  AI tools significantly improved the efficiency of my website project by automating repetitive tasks like generating boilerplate code and debugging common errors. They provided real-time suggestions, reducing development time and improving code quality. With AI assistance, I could focus more on design and functionality rather than syntax and structure.
+  AI tools significantly improved the efficiency of my website project by automating repetitive tasks like debugging common errors, and refining css. They provided reduced a ton of time where would be guessing and checking elements. With AI assistance, I could focus more on design and functionality rather than syntax and structure.
   </p>
 
   <p class="description">
-    I experimented with different AI models, and I noticed variations in their performance. Some models excelled at generating clean, well-structured HTML and CSS, while others were better at optimizing JavaScript logic. The balance between speed, accuracy, and contextual understanding played a key role in choosing the right AI assistant.
+    I experimented with different AI models (Primarily Anthropics Claude, and OpenAI's ChatGPT), and I noticed variations in their performance. ChatGPT excelled at generating clean, well-structured HTML and CSS, while Claude was better at optimizing JavaScript logic. The balance between speed, accuracy, and contextual understanding played a key role in choosing the right AI assistant.
   </p>
 
   <p class="description">
-    One particularly useful example was using AI to generate responsive navigation bar code with just a simple prompt: "Create a mobile-friendly navbar with dropdown menus." It also helped refine my JavaScript by suggesting an optimized event listener for handling user interactions. These AI-driven enhancements made the development process much smoother.
+    One particularly useful example was using AI to generate simple but effective navbar. It also helped refine my JavaScript by suggesting an optimized event listener for handling user interactions. These AI-driven enhancements made the development process much smoother.
   </p>
 
     
@@ -49,9 +49,9 @@ title: Reflection
         );
       }</pre>
       
-      <h3 class="font-bold mt-4">Response from [Other Model]:</h3>
+      <h3 class="font-bold mt-4">Response from Claude 3.7 Sonnet:</h3>
       <pre class="bg-gray-200 p-2 rounded"><pre><code>
-      &lt;!-- Other Model Response --&gt;
+      &lt;!-- Claude 3.7 Sonnet --&gt;
       import React, { useState } from "react";
 
       function Navbar() {
