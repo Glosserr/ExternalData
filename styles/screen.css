@@ -74,12 +74,12 @@ h2, h3 {
 
 .bg-gray-100 {
     background: #3D4F3A;
-    color: #EAE8FF;
+    color: #1B2A1F;
 }
 
 .bg-gray-200 {
     background: #556B52;
-    color: #EAE8FF;
+    color:#1B2A1F ;
 }
 
 .shadow {
@@ -101,12 +101,27 @@ h2, h3 {
     color: #EAE8FF;
 }
 
-.lg\:prose-xl {
+.lg:prose-xl {
     font-size: 1.1em;
+    color: #1B2A1F;
 }
 
 .max-w-3xl {
     max-width: 800px;
+}
+
+.API1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #556B52;
+}
+
+.API2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #556B52;
 }
 
 pre {
